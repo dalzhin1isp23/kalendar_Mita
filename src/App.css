@@ -1,0 +1,239 @@
+* {
+  background-color: #F1CAE7;
+}
+.mita_img {
+  height: 500px;
+  width: 320px;
+  float: left;
+  z-index: 50;
+  margin: 20px;
+}
+.obolochka {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.god {
+  background-color: #FA8CBB;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  float: right;
+  margin: 10px;
+  margin-right: 200px;
+}
+.pole_chisel {
+  background-color: #FA8CBB;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.verh {
+  width: 100%;
+  height: 50px;
+}
+.kalendar_pole {
+  width: 500px;
+  margin: 20px;
+  height: 300px;
+  background-color: #FA8CBB;
+  float: left;
+  height:350px ;
+  border-radius: 10px;
+}
+.polosa {
+  margin-top: 50px;
+  width: 50%;
+  margin-left: -30px;
+  height: 80px;
+  z-index: -1;
+  background-color: #FA8CBB;
+  border: 2px solid black;
+  float: left;
+  padding-left: 50px;
+  border-radius:100px 50px 50px 0px;
+  position: relative;
+  transition: transform 0.3s ease; 
+  transform: translateX(-200%); 
+  display: none; 
+}
+
+.polosa.visible {
+  display: flex; 
+  transform: translateX(50px); 
+}
+
+.polosa .content {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  overflow: hidden;
+  border: none;
+  background-color: transparent; 
+}
+.polosa .controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent; 
+}
+.polosa button {
+  color: black; 
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 25px; 
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+.polosa button.add {
+  background-color: #FFFCF2; 
+}
+.polosa button.delete {
+  background-color: #F27DBA; 
+}
+.chislo {
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 10px;
+  cursor: pointer;
+}
+.chislo.selected {
+  background-color: #ccc;
+}
+.chislo.has-event {
+  background-color: #B81268;
+}
+.chislo.today {
+  border: 2px solid #8B0000; 
+  background-color: #fff; 
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.month-picker-modal {
+  background: #FA8CBB;
+  border-radius: 20px;
+  padding: 25px;
+  width: 320px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  border: 2px solid black;
+}
+.modal-header {
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  text-align: center;
+  height: 30px;
+}
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: bold;
+}
+.head_zag {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: center;
+  margin-right: 50px;
+  border-radius: 50px;
+}
+.close-btn {
+  background: white;
+  border: 1px solid black;
+  border-radius: 0% 50% 50% 0%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  float: right;
+  justify-content: center;
+  color: #333;
+  transition: all 0.2s;
+}
+.close-btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+.year-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  border-radius: 50px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.current-year {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #333;
+  min-width: 80px;
+  display: inline-block;
+}
+.year-arrow {
+  background: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: all 0.2s;
+}
+.year-arrow:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border-radius: 20px;
+}
+.month-item {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  background: white;
+  border: 1px solid black;
+}
+.month-item:hover {
+  background: #B81268;
+  transform: translateY(-2px);
+}
+.month-item.selected {
+  background: #B81268;
+  color: white;
+  font-weight: 500;
+}
